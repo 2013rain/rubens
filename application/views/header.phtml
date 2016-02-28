@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title><?php echo $title ?></title>
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<meta name="keywords" content="<?php echo $title ?>,wangfuyu,2013rain,代码,王富雨,富雨" />
+    <meta name="description" content="从前，有个放羊娃，每天都去山上放羊。" />
+    <Meta name="Robots" Content="index" />
+    <Meta name="Author" Content="王富雨,936466975@qq.com">
+	<meta name="baidu-site-verification" content="RalhaEt9fN" />
+<link rel="icon" href="http://image.wangfuyu.com.cn/wangfuyu_16.jpg" type="image/x-icon" />
+<link rel="shortcut icon" href="./1.ico" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <link rel="stylesheet" type="text/css" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+    <script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+	<script src="http://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<script src="http://image.wangfuyu.com.cn/js/mustache.js"></script>
+	<style>
+.row h2{white-space:normal; word-wrap : break-word;word-break:break-all;min-height: 80px;margin-bottom:0px;}
+.row .content{
+	height: 100px;overflow: hidden;overflow-wrap: normal;white-space:normal; word-wrap : break-word;word-break:break-all;
+}
+</style>
+	
+</head>
+<body>
+<div style="width:0px; height:0px; overflow:hidden">
+<img style="width:0px; height:0px; overflow:hidden"   src="http://image.wangfuyu.com.cn/wangfuyu_200.jpg" />
+<img style="width:0px; height:0px; overflow:hidden"   src="http://image.wangfuyu.com.cn/wangfuyu_400.jpg" />
+</div>
+<!-- Static navbar -->
+    <nav class="navbar navbar-default navbar-static-top">
+      <div class="container" >
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">Rubeus</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+          <?php foreach($nav_list as $nk=>$nv):?>
+            <li class="<?php echo  $nv['class']?>"><a href="<?php echo $nv['url'];?>"><?php echo $nv["name"];?></a></li>
+           <?php endforeach;?>
+          </ul>
+          <?php /*
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="../navbar/">Default</a></li>
+            <li class="active"><a href="./">Static top <span class="sr-only">(current)</span></a></li>
+            <li><a href="../navbar-fixed-top/">Fixed top</a></li>
+          </ul>
+          */?>
+             <form class="navbar-form navbar-right" method="get" action="/art">
+	            <input type="text" class="form-control" placeholder="Search..." name="keyword">
+	          </form>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+<div class="_resize">

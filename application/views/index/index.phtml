@@ -1,0 +1,31 @@
+<div class="container " >
+
+        <div class="col-xs-12 col-sm-12">
+        <!-- 
+          <div class="jumbotron">
+            <h1>Hi 乡亲们and朋友们!</h1>
+            <p>这个网站是我用来记录一些工作中的总结的，可能会对某些人有些帮助</p>
+          </div>
+          -->
+          <div class="row">
+          <?php foreach( $res_list as $k1=>$art) :?>
+            <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
+              <h2><?php echo $art["art_name"];?></h2>
+              <p class="blog-post-meta"><?php echo $art['modify_time']?> <a href="<?php echo $art['category_url']?>"><?php echo $art['category_name']?></a></p>
+              <p class="content">
+              <?php echo $art["content"]?>
+              </p>
+              <p><a class="btn btn-default" href="<?php echo $art['detail_url']?>" role="button">View details &raquo;</a></p>
+              <div>
+              <hr align="center" size="1" color="#dbdbdb" style="  margin: 0px 12px 0px 12px;"/>
+              </div>
+            </div>
+            <?php endforeach;?>
+            
+          </div>
+          <!--/row-->
+        </div><!--/.col-xs-12.col-sm-9-->
+
+ </div>
+ 
+

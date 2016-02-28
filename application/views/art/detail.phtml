@@ -1,0 +1,16 @@
+<div class="container">
+
+      <div class="blog-header">
+        <h1 class="blog-title"><?php echo $art_res["art_name"]?></h1>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-12 blog-main">
+        <p class="blog-post-meta"><?php echo $art_res['modify_time']?> <a href="<?php echo $art_res['category_url']?>"><?php echo $art_res['category_name']?></a></p>
+        <p><pre>
+        <?php echo $art_res["content"]?>
+        </pre>
+        </p>
+        </div>
+       </div>
+</div>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu>
+  <nav>
+  	<name><![CDATA[名字]]></name>
+	<url><![CDATA[名字]]></url>
+	<page><![CDATA[名字]]></page>
+  </nav>
+ <nav>
+  	<name><![CDATA[名字]]></name>
+	<url><![CDATA[名字]]></url>
+	<page><![CDATA[名字]]></page>
+  </nav>
+  <nav>
+  	<name><![CDATA[名字]]></name>
+	<url><![CDATA[名字]]></url>
+	<page><![CDATA[名字]]></page>
+  </nav>
+</menu>

@@ -1,0 +1,98 @@
+<style>
+/*
+ * Off Canvas
+ * --------------------------------------------------
+ */
+html,
+body {
+  overflow-x: hidden; /* Prevent scroll on narrow devices */
+}
+@media screen and (max-width: 767px) {
+  .row-offcanvas {
+    position: relative;
+    -webkit-transition: all .25s ease-out;
+         -o-transition: all .25s ease-out;
+            transition: all .25s ease-out;
+  }
+  .row-offcanvas-right {
+    right: 0;
+  }
+  .row-offcanvas-left {
+    left: 0;
+  }
+  .row-offcanvas-right
+  .sidebar-offcanvas {
+    right: -50%; /* 6 columns */
+  }
+  .row-offcanvas-left
+  .sidebar-offcanvas {
+    left: -50%; /* 6 columns */
+  }
+  .row-offcanvas-right.active {
+    right: 50%; /* 6 columns */
+  }
+  .row-offcanvas-left.active {
+    left: 50%; /* 6 columns */
+  }
+  .sidebar-offcanvas {
+    position: absolute;
+    top: 0;
+    width: 50%; /* 6 columns */
+  }
+}
+</style>
+    <div class="container">
+
+      <div class="row row-offcanvas row-offcanvas-right">
+
+        <div class="col-xs-12 col-sm-9">
+          <p class="pull-right visible-xs">
+            <button type="button" class="btn btn-success btn-sm" data-toggle="offcanvas">Toggle nav</button>
+          </p>
+          <div ><!-- 占位用 -->
+          </div>
+          <div class="row">
+          	<?php foreach ($art_list as $ak=>$av):?>
+          	
+            <div class="col-xs-12  col-sm-6 col-lg-4">
+              <h2><?php echo $av["art_name"]?></h2>
+              <p class="blog-post-meta"><?php echo $av['modify_time']?> <a href="<?php echo $av['category_url']?>"><?php echo $av['category_name']?></a></p>
+              <p  class="content">
+              <?php echo $av["content"]?>
+              </p>
+              <p><a class="btn btn-default" href="<?php echo $av['detail_url']?>" role="button">View details &raquo;</a></p>
+            <div>
+              <hr align="center" size="1" color="#dbdbdb" style="  margin: 0px 12px 0px 12px;"/>
+              </div>
+            </div><!--/.col-xs-6.col-lg-4-->
+          <?php endforeach;?>
+          </div><!--/row-->
+          <div class="row">
+          		<div  class="col-xs-12">
+	           <ul class="pagination">
+	           <?php foreach ($pagelist as $pv):?>
+				  <li class="<?php echo $pv['class']?>"><a href="<?php echo $pv['url']?>"><?php echo $pv['index']?></a></li>
+				 <?php endforeach;?>
+				  <li><a>共<?php echo $totalpage?>页</a></li>
+				</ul>
+				</div>
+			 </div>         
+        </div><!--/.col-xs-12.col-sm-9-->
+
+        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
+          <div class="list-group">
+          <?php foreach ($category_list as $ck=>$cv):?>
+            <a href="<?php echo $cv['url']?>" class="list-group-item <?php echo $cv['class']?>"><?php echo $cv["category_name"]?></a>
+           <?php endforeach;?>
+          </div>
+        </div><!--/.sidebar-offcanvas-->
+      </div><!--/row-->
+
+    </div>
+<script>
+$(document).ready(function () {
+  	  $('[data-toggle="offcanvas"]').click(function () {
+  	    $('.row-offcanvas').toggleClass('active')
+  	  });
+  	});
+</script>

@@ -1,0 +1,20 @@
+</div>
+<footer style="text-align:center;align:center;bottom:0;height:50px;width:100%;padding-top:20px">
+        &copy; author wfy  <?php echo date("Y");?>
+</footer>
+<script>
+$(function(){
+	var re_size = function()
+	{
+		var h =window.innerHeight;
+		var h1 =50;
+		var h2 =50;
+		var h3 =h-h1-h2-21;
+		$("._resize").css("min-height",h3+"px");
+	}
+	re_size();
+})
+
+</script>
+</body>
+</html>
